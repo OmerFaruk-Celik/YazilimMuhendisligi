@@ -11,3 +11,4 @@ git commit -m "yorum yapılacak"
 
 git rm <dosya adi> //dosyayı siler eğer repoda pushlanmamışsa silmez 
 
+git init --bare "ProjeAdi.git" //yalın bir repo oluşturur
