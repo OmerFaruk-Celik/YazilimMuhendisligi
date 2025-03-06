@@ -6,4 +6,6 @@ git config --global user.email "youremail.com"
 git config --global user.name "Your Name"
 
 git add . //nokta ile klasörde var olan her şey eklenir
+git add --all // nokta ile aynı şeyi yapar
 git commit -m "yorum yapılacak"
+
