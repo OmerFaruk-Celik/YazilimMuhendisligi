@@ -3,4 +3,6 @@ echo "Yazi text" > deneme.txt // biliyorsun
 git status //mevcut durumu belirtir
 
 git config --global user.email "youremail.com"
-git config --global user.email "youremail.com"
+git config --global user.name "Your Name"
+
+
