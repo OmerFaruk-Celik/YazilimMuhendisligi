@@ -25,3 +25,5 @@ git log -n 3 //son 3 satırda gösterir
 git commit --ammend //en son commit üzerinde değişiklik yapmatyı sağlıyor
 
 git revert "geriye çevirmek istediğim commit hashi"
+
+git tag -a v1.0.1 -m "1.0.1" //verison bilgisi ekler
