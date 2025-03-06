@@ -11,6 +11,11 @@ git commit -m "yorum yapılacak"
 
 git rm <dosya adi> //dosyayı siler eğer repoda pushlanmamışsa silmez 
 
-git init --bare "ProjeAdi.git" //yalın bir repo oluşturur. yalın repoda çalışılamaz
+git init --bare "ProjeAdi.git" //yalın bir repo oluşturur. Yalın repoda çalışılamaz
 
 git clone "ProjeAdi.git" //klonlar
+
+git push origin main // değişiklikleri repoya atar
+git pull origin main
+
+git log
