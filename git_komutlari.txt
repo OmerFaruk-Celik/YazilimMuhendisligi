@@ -22,7 +22,7 @@ git log // logları gösterir
 git log --online //loglar tek satırda gösteririlir
 git log -n 3 //son 3 satırda gösterir
 
-git commit --ammend //en son commit üzerinde değişiklik yapmatyı sağlıyor
+git commit --ammend //en son commit üzerinde değişiklik yapmayı sağlıyor
 
 git revert "geriye çevirmek istediğim commit hashi"
 
