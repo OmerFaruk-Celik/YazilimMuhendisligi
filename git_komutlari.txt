@@ -27,3 +27,62 @@ git commit --ammend //en son commit üzerinde değişiklik yapmayı sağlıyor
 git revert "geriye çevirmek istediğim commit hashi"
 
 git tag -a v1.0.1 -m "1.0.1" //verison bilgisi ekler
+
+
+Adımlar
+Adım 1: Yeni Bir Klasör Oluşturun ve Git Başlatın
+sh
+
+mkdir my_project
+cd my_project
+git init
+
+Adım 2: Dosyalar Ekleyin ve İlk Commit'i Yapın
+sh
+
+# Örnek dosya ekleyin
+echo "# My Project" > README.md
+mkdir src
+touch src/main.py
+
+# Dosyaları izlemeye alın ve commit yapın
+git add .
+git commit -m "Initial commit"
+
+Adım 3: Uzak Depo (Remote Repository) Ekleyin ve İlk Push'u Yapın
+sh
+
+# Uzak depoyu ekleyin
+git remote add origin https://github.com/OmerFaruk-Celik/my_project.git
+
+# Uzak depodaki değişiklikleri çekin ve rebase yapın
+git pull origin main --rebase
+
+# Değişiklikleri uzak depoya gönderin
+git push -u origin main
+
+Özet Adımlar
+
+    Yeni klasör oluşturma ve git başlatma:
+    sh
+
+mkdir my_project
+cd my_project
+git init
+
+Dosya ekleme ve ilk commit:
+sh
+
+echo "# My Project" > README.md
+mkdir src
+touch src/main.py
+git add .
+git commit -m "Initial commit"
+
+Uzak depo ekleme ve push:
+sh
+
+git remote add origin https://github.com/OmerFaruk-Celik/my_project.git
+git pull origin main --rebase
+git push -u origin main
+
