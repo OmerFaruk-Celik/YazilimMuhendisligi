@@ -1,0 +1,340 @@
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ ls
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ touch test.txt
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git add .
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git commit -m "initial commit"
+[master (root-commit) 3412df3] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git push origin main 
+error: src refspec main does not match any
+error: failed to push some refs to '/home/celik/github/YazilimMuhendisligi/myrepo'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo
+ * [new branch]      master -> master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git branch
+* master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git branch -r
+  origin/master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git checkout -b feature-1 master
+Switched to a new branch 'feature-1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git branch
+* feature-1
+  master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git push origin feature-1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo
+ * [new branch]      feature-1 -> feature-1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git remote -v
+origin	/home/celik/github/YazilimMuhendisligi/myrepo (fetch)
+origin	/home/celik/github/YazilimMuhendisligi/myrepo (push)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git init --bare git-flow
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow/
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ git clone git-flow git-flow-clone
+Cloning into 'git-flow-clone'...
+warning: You appear to have cloned an empty repository.
+done.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone$ cd git-flow-clone/
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ touch x
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git add --all
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git commit -m "initial commit"
+[master (root-commit) 8a30ddd] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 x
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ * [new branch]      master -> master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout -b develop master
+Switched to a new branch 'develop'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout -b f1 develop
+Switched to a new branch 'f1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout -b f2 develop
+Switched to a new branch 'f2'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout f1
+Switched to branch 'f1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ touch xx
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git add --all
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git commit -m "initial commit xx"
+[f1 a0207b2] initial commit xx
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 xx
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin f1
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 367 bytes | 367.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ * [new branch]      f1 -> f1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git merge --no-ff f1
+Merge made by the 'ort' strategy.
+ xx | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 xx
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout f1
+Switched to branch 'f1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git loj --oneline
+git: 'loj' is not a git command. See 'git --help'.
+
+The most similar command is
+	log
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --oneline
+a0207b2 (HEAD -> f1, origin/f1) initial commit xx
+8a30ddd (origin/master, f2, develop) initial commit
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout develop
+Switched to branch 'develop'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --oneline 
+8a30ddd (HEAD -> develop, origin/master, f2) initial commit
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout develop
+Already on 'develop'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -d f1
+error: The branch 'f1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D f1'.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -D f1
+Deleted branch f1 (was a0207b2).
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ * [new branch]      develop -> develop
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout -b release-v1.0.0 develop
+Switched to a new branch 'release-v1.0.0'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ touch release.properties
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ echo v1.0.0>release.properties
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git add --all
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git commit -m "sürüm dosyası oluşturuldu"
+On branch release-v1.0.0
+nothing to commit, working tree clean
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin release-v1.0.0
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 422 bytes | 422.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ * [new branch]      release-v1.0.0 -> release-v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -r
+  origin/develop
+  origin/f1
+  origin/master
+  origin/release-v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin :f1
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ - [deleted]         f1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git merge --no-ff release-v1.0.0
+Merge made by the 'ort' strategy.
+ release.properties | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 release.properties
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag -a v1.0.0
+fatal: no tag message?
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag -a v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag,
+git: 'tag,' is not a git command. See 'git --help'.
+
+The most similar commands are
+	stage
+	tag
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag
+v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout develop
+Switched to branch 'develop'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git merge --no-ff release-v1.0.0
+Merge made by the 'ort' strategy.
+ release.properties | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 release.properties
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -d release-v1.0.0
+Deleted branch release-v1.0.0 (was 8f27194).
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout -b hotfix-v1.0.1 tags/v1.0.0
+Switched to a new branch 'hotfix-v1.0.1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ echo 1.0.1 > release.properties
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git add --all
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git commit -m "hotfix version 1.0.1 created"
+[hotfix-v1.0.1 672bf31] hotfix version 1.0.1 created
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin hotfix-v1.0.1
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.29 KiB | 662.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ * [new branch]      hotfix-v1.0.1 -> hotfix-v1.0.1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git merge hotfix-v1.0.1
+Updating ce1a867..672bf31
+Fast-forward
+ release.properties | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+   8a30ddd..672bf31  master -> master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch
+  develop
+  f2
+  hotfix-v1.0.1
+* master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag -a v1.0.1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout develop
+Switched to branch 'develop'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git merge --no-f hotfix-v1.0.1
+Merge made by the 'ort' strategy.
+ release.properties | 2 +-
+ xx                 | 0
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 xx
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin --delete hotfix-v1.0.1
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ - [deleted]         hotfix-v1.0.1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -d hotfix-v1.0.1
+Deleted branch hotfix-v1.0.1 (was 672bf31).
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch
+* develop
+  f2
+  master
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git branch -r
+  origin/develop
+  origin/master
+  origin/release-v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git push origin --delete release-v1.0.0
+To /home/celik/github/YazilimMuhendisligi/myrepo-clone/git-flow
+ - [deleted]         release-v1.0.0
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --oneline
+672bf31 (HEAD -> master, tag: v1.0.1, origin/master) hotfix version 1.0.1 created
+ce1a867 (tag: v1.0.0) Merge branch 'release-v1.0.0'
+8f27194 oto commit 2025-03-27 11:51:01.309359
+a7663a5 Merge branch 'f1'
+a0207b2 initial commit xx
+8a30ddd (origin/develop, f2) initial commit
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag -| v1.0.1 v1.0.0
+fatal: '-' is not a valid tag name.
+v1.0.1: command not found
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git tag -l v1.0.1 v1.0.0
+v1.0.0
+v1.0.1
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git rev-list v1.0.0 | head -n 1
+ce1a867e7c7332f5e0ac8082057880a122dc226a
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git rev-list v1.0.1 | head -n 1
+672bf31a9ceb1f812f311e6fcf68981d2c4fbfb4
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --oneline 
+672bf31 (HEAD -> master, tag: v1.0.1, origin/master) hotfix version 1.0.1 created
+ce1a867 (tag: v1.0.0) Merge branch 'release-v1.0.0'
+8f27194 oto commit 2025-03-27 11:51:01.309359
+a7663a5 Merge branch 'f1'
+a0207b2 initial commit xx
+8a30ddd (origin/develop, f2) initial commit
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout tags/v1.0.0
+Note: switching to 'tags/v1.0.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ce1a867 Merge branch 'release-v1.0.0'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git checkout --merges
+error: unknown option `merges'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --merges
+commit ce1a867e7c7332f5e0ac8082057880a122dc226a (HEAD, tag: v1.0.0)
+Merge: a7663a5 8f27194
+Author: OmerFaruk-Celik <faruktrhakan@hotmail.com>
+Date:   Thu Mar 27 11:53:06 2025 +0300
+
+    Merge branch 'release-v1.0.0'
+
+commit a7663a52480448b85678fb02cdeada74485c8f46
+Merge: 8a30ddd a0207b2
+Author: OmerFaruk-Celik <faruktrhakan@hotmail.com>
+Date:   Thu Mar 27 11:46:28 2025 +0300
+
+    Merge branch 'f1'
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ git log --first-parent --oneline develop
+e265da9 (develop) Merge branch 'hotfix-v1.0.1' into develop
+d955aec Merge branch 'release-v1.0.0' into develop
+8a30ddd (origin/develop, f2) initial commit
+celik@celik:~/github/YazilimMuhendisligi/myrepo-clone/git-flow-clone$ 
